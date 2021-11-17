@@ -15,7 +15,7 @@ const FoodItem = (props) => {
   const [food,setFood]=useState({});
 
   const reduxState = useSelector((globalStore) =>
-    globalStore.cart.cart.filter((each) => each.id === props.id)
+    globalStore.cart.cart.filter((each) => each._id === props._id)
   );
   
 
