@@ -32,7 +32,7 @@ const FoodItem = (props) => {
   },[dispatch,props._id])
 
    useEffect(() => {
-    if (reduxState.length !== 0) {
+    if (reduxState.length != 0) {
       setFood((prev) => ({ ...prev, isAddedToCart: true }));
     }
   }, [reduxState]);
