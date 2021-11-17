@@ -12,7 +12,7 @@ export const getUser=(_id)=> async(dispatch)=>{
     try {
         const User=await axios({
             method:"GET",
-            url:`http://localhost:5000/user/${_id}`,
+            url:`https://zomato-clone-backend-kushagra.herokuapp.com/user/${_id}`,
     
         })
     
@@ -26,7 +26,7 @@ export const getMyslef=()=> async(dispatch)=>{
     try {
         const User=await axios({
             method:"GET",
-            url:`http://localhost:5000/user/`,
+            url:`https://zomato-clone-backend-kushagra.herokuapp.com/user/`,
     
         })
     

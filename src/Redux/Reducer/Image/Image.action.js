@@ -12,7 +12,7 @@ export const getImage=(_id)=> async(dispatch)=>{
     try {
         const Image=await axios({
             method:"GET",
-            url:`http://localhost:5000/image/${_id}`,
+            url:`https://zomato-clone-backend-kushagra.herokuapp.com/image/${_id}`,
     
         })
     

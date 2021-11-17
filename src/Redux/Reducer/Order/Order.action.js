@@ -11,7 +11,7 @@ export const createOrder=(amount)=> async(dispatch)=>{
     try {
         const order=await axios({
             method:"POST",
-            url:"http://localhost:5000/payments/new",
+            url:"https://zomato-clone-backend-kushagra.herokuapp.com/payments/new",
             data:{amount}
         })
     
@@ -37,7 +37,7 @@ export const orderPlaced=(cartData)=> async(dispatch)=>{
             };
             axios({
                 method: "POST",
-                url: `http://localhost:5000/order/new/create`,
+                url: `https://zomato-clone-backend-kushagra.herokuapp.com/order/new/create`,
                 data: { orderDetails },
               });
               

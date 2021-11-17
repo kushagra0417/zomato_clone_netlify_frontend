@@ -34,7 +34,7 @@ export default function SignIn({isOpen, setIsOpen}) {
      })
 
   }
- const googlesignin= ()=>(window.location.href="http://localhost:5000/auth/google")
+ const googlesignin= ()=>(window.location.href="https://zomato-clone-backend-kushagra.herokuapp.com/auth/google")
 
   return (
     <>

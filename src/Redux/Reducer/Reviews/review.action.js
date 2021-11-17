@@ -11,7 +11,7 @@ export const getReviews=(resId)=> async(dispatch)=>{
     try {
         const reviewList=await axios({
             method:"GET",
-            url:`http://localhost:5000/reviews/${resId}`,
+            url:`https://zomato-clone-backend-kushagra.herokuapp.com/reviews/${resId}`,
     
         })
     
@@ -27,7 +27,7 @@ export const postReviews = (reviewData) => async (dispatch) => {
     
       await axios({
         method: "POST",
-        url: `http://localhost:5000/reviews/new`,
+        url: `https://zomato-clone-backend-kushagra.herokuapp.com/reviews/new`,
         data: { reviewData },
       });
   

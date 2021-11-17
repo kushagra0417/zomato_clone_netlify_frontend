@@ -13,7 +13,7 @@ export const getFood=(foodId)=> async(dispatch)=>{
     try {
         const Food=await axios({
             method:"GET",
-            url:`http://localhost:5000/food/${foodId}`,
+            url:`https://zomato-clone-backend-kushagra.herokuapp.com/food/${foodId}`,
     
         })
     
@@ -27,7 +27,7 @@ export const getFoodList=(menuId)=> async(dispatch)=>{
     try {
         const Menu=await axios({
             method:"GET",
-            url:`http://localhost:5000/menu/list/${menuId}`,
+            url:`https://zomato-clone-backend-kushagra.herokuapp.com/menu/list/${menuId}`,
     
         })
     

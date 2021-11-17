@@ -11,7 +11,7 @@ export const getRestaurant=()=> async(dispatch)=>{
     try {
         const restaurantList=await axios({
             method:"GET",
-            url:"http://localhost:5000/restaurant/?city=Varanasi",
+            url:"https://zomato-clone-backend-kushagra.herokuapp.com/restaurant/?city=Varanasi",
     
         })
     
@@ -25,7 +25,7 @@ export const getSpecificRestaurant=(_id)=> async(dispatch)=>{
     try {
         const restaurant=await axios({
             method:"GET",
-            url:`http://localhost:5000/restaurant/${_id}`,
+            url:`https://zomato-clone-backend-kushagra.herokuapp.com/restaurant/${_id}`,
     
         })
     
