@@ -36,7 +36,7 @@ export const googleAuth=(token)=> async(dispatch)=>{
         
         localStorage.setItem("zomatoUser",JSON.stringify({token}))
         getMyslef();
-        window.location.href="http://localhost:3000/delivery"
+        window.location.href="https://zomato-clone-kushagra.netlify.app/delivery"
         return dispatch({type:GOOGLE_AUTH,payload:{}})
     } catch (error) {
         return dispatch({type:"ERROR",payload:error})
@@ -66,7 +66,7 @@ export const signOut=()=> async(dispatch)=>{
         
         localStorage.removeItem("zomatoUser")
        clearUser();
-     window.location.href="http://localhost:3000/delivery"
+     window.location.href="https://zomato-clone-kushagra.netlify.app/delivery"
         return dispatch({type:SIGN_OUT,payload:{}})
     } catch (error) {
         return dispatch({type:"ERROR",payload:error})
