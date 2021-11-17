@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import ReactStars from "react-rating-stars-component";
 import { AiOutlinePlus } from "react-icons/ai";
 
@@ -13,6 +13,10 @@ import { addCart } from "../../../Redux/Reducer/Cart/Cart.action";
 const FoodItem = (props) => {
 
   const [food,setFood]=useState({});
+
+  const reduxState = useSelector((globalStore) =>
+    globalStore.cart.cart.filter((each) => each.id === props.id)
+  );
   
 
  const dispatch=useDispatch()
@@ -27,11 +31,11 @@ const FoodItem = (props) => {
     
   },[dispatch,props._id])
 
-  //  useEffect(() => {
-  //   if (reduxState.length != 0) {
-  //     setFood((prev) => ({ ...prev, isAddedToCart: true }));
-  //   }
-  // }, [reduxState]);
+   useEffect(() => {
+    if (reduxState.length !== 0) {
+      setFood((prev) => ({ ...prev, isAddedToCart: true }));
+    }
+  }, [reduxState]);
 
   const addFoodToCart =()=>{
     dispatch(addCart({...food,quantity:1,totalPrice:food.price}))
