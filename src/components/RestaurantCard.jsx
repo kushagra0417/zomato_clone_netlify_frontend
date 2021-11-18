@@ -20,7 +20,7 @@ const RestaurantCard = (props) => {
   }, [props.photos,dispatch])
 
     return (
-      <Link to={`/restaurant/${props._id}`} className="w-full  md:w-1/2 lg:w-1/3 " >
+      <Link to={`/restaurant/${props._id}/overview`} className="w-full  md:w-1/2 lg:w-1/3 " >
         <div className="bg-white p-4  w-full  mb-4 rounded-2xl  hover:shadow-lg trasition duration-700 ease-in-out">
           <div className="w-full h-56 lg:h-64 relative">
             <div className="absolute bottom-4 flex w-full items-end justify-between ">

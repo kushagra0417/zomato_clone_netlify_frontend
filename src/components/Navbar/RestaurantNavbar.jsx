@@ -6,7 +6,7 @@ import {RiSearch2Line} from "react-icons/ri"
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useSelector,useDispatch } from 'react-redux'
 import gravatar from "gravatar"
-
+import { useHistory } from 'react-router'
 //components
 import SignIn from '../Auth/SignIn'
 import SignUp from '../Auth/SignUp'
@@ -19,12 +19,13 @@ import { signOut } from '../../Redux/Reducer/Auth/Auth.action'
 const MobileNav =({SignIn,SignUp}) =>{
   const [isDropDownOpen,setIsDropDownOpen]=useState(false)
   const dispatch=useDispatch();
+  const history=useHistory()
   const reduxState=useSelector((globalStore)=>globalStore.user.user)
   
   const signOutHandler=()=>dispatch(signOut())
    return (
      <div className="w-full flex items-center justify-between lg:hidden">
-       <AiOutlineArrowLeft />
+       <AiOutlineArrowLeft  onClick={history.goBack}/>
        <div className="w-28">
          <img
            src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"

@@ -3,16 +3,17 @@ import { FaUserAlt } from "react-icons/fa";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { useSelector } from 'react-redux'
 import gravatar from "gravatar"
+import { useHistory } from "react-router";
 
 const RestaurantNavbar = () => {
-  
+  const history=useHistory()
   const reduxState=useSelector((globalStore)=>globalStore.user.user)
   return (
     <>
       <nav className="p-4 flex w-full items-center  bg-white shadow-md  lg:shadow-none ">
       <div className="container mx-auto px-4 lg:px-20 xl:px-48">
       <div className="w-full flex items-center justify-between ">
-          <AiOutlineArrowLeft />
+          <AiOutlineArrowLeft onClick={history.goBack} />
           <div className="w-28">
             <img
               src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png"
