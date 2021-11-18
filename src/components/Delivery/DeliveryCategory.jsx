@@ -22,8 +22,8 @@ const DeliveryLgCard=({image,title})=>{
     
     return (
         <>
-          <div className=" hidden    lg:block w-64 h-56  px-9">
-           <div className="w-full h-48">
+          <div className=" hidden    lg:block lg:w-64 xl:w-80 h-56  px-9">
+           <div className="w-full lg:h-44 xl:h-48">
             <img src={image} alt="food" className="w-full h-full object-cover rounded-md shadow-lg" />   
             </div> 
              <div >
